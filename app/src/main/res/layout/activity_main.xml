@@ -9,134 +9,49 @@
 
     <TextView
         android:id="@+id/cardDescription"
-        android:layout_width="289dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="@+id/cardGridView"
         app:layout_constraintRight_toRightOf="@+id/cardGridView"
-        app:layout_constraintTop_toBottomOf="@+id/cardGridView"
-        app:layout_constraintVertical_bias="0.100000024" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.094" />
 
-    <TextView
-        android:id="@+id/cardHitpoints"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="8dp"
-        android:text="Hitpoints\n"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="346dp"
+        android:layout_height="298dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintHorizontal_bias="0.42"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardDescription"
-        app:layout_constraintVertical_bias="0.077" />
-
-    <TextView
-        android:id="@+id/cardDPS"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginRight="47dp"
-        android:layout_marginTop="8dp"
-        android:text="Damage Per Second\n"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardDescription"
-        app:layout_constraintVertical_bias="0.077" />
-
-    <TextView
-        android:id="@+id/cardDamage"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="8dp"
-        android:text="Damage\n"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardHitpoints"
-        app:layout_constraintVertical_bias="0.124" />
-
-    <TextView
-        android:id="@+id/cardHitspeed"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="7dp"
-        android:layout_marginRight="47dp"
-        android:layout_marginTop="8dp"
-        android:text="Hit Speed\n"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardDPS"
-        app:layout_constraintVertical_bias="0.116" />
-
-    <TextView
-        android:id="@+id/cardTargets"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="8dp"
-        android:text="Targets\n"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardDamage"
-        app:layout_constraintVertical_bias="0.127" />
-
-    <TextView
-        android:id="@+id/cardSpeed"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginRight="47dp"
-        android:layout_marginTop="8dp"
-        android:text="Speed\n"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardHitspeed"
-        app:layout_constraintVertical_bias="0.133" />
-
-    <TextView
-        android:id="@+id/cardRange"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="8dp"
-        android:text="Range\n"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardTargets"
-        app:layout_constraintVertical_bias="0.183" />
-
-    <TextView
-        android:id="@+id/cardDeployTime"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginRight="47dp"
-        android:layout_marginTop="8dp"
-        android:text="Deploy Time\n"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardSpeed"
-        app:layout_constraintVertical_bias="0.09" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/deckbackground" />
 
     <GridView
-        app:layout_constraintRight_toRightOf="parent"
-        android:numColumns="4"
         android:id="@+id/cardGridView"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="270dp"
+        android:layout_height="200dp"
         android:layout_marginBottom="16dp"
-        app:layout_constraintVertical_bias="0.060000002"
-        android:layout_width="320dp"
-        android:layout_height="220dp"
-        android:horizontalSpacing="5dp"
-        android:verticalSpacing="5dp" />
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:horizontalSpacing="10dp"
+        android:numColumns="4"
+        android:verticalSpacing="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.120000005" />
 
 </android.support.constraint.ConstraintLayout>

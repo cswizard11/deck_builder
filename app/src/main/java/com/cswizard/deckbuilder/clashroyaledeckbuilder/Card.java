@@ -1,5 +1,6 @@
 package com.cswizard.deckbuilder.clashroyaledeckbuilder;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -15,6 +16,9 @@ public abstract class Card
     private String description;
     private HashMap<String, Double> other;
     private int level;
+    private int defenseScore;
+    private int offenseScore;
+    private ArrayList<Card> worksWellWith = new ArrayList<Card>();
 
     private int resourceId;
 
@@ -65,6 +69,21 @@ public abstract class Card
         return level;
     }
 
+    public int getDefenseScore()
+    {
+        return defenseScore;
+    }
+
+    public int getOffenseScore()
+    {
+        return offenseScore;
+    }
+
+    public ArrayList<Card> getWorksWellWith()
+    {
+        return worksWellWith;
+    }
+
     public void setName(String name)
     {
         this.name = name;
@@ -98,6 +117,16 @@ public abstract class Card
     public void setLevel(int level)
     {
         this.level = level;
+    }
+
+    public void setDefenseScore()
+    {
+        this.defenseScore = defenseScore;
+    }
+
+    public void setOffenseScore()
+    {
+        this.defenseScore = offenseScore;
     }
 
     public double getOther(String key)

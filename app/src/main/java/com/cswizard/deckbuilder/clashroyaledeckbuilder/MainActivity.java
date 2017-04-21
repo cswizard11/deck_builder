@@ -14,6 +14,8 @@ public class MainActivity extends AppCompatActivity
 {
     private HashMap<String, Card> cards;
     private final static String TAG = "DeckBuilder";
+    private boolean cardSelected = false;
+    private Card currentCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -87,24 +89,18 @@ public class MainActivity extends AppCompatActivity
             {
                 Card card = (Card)parent.getItemAtPosition(position);
                 TextView text = (TextView)findViewById(R.id.cardDescription);
-                text.setText(card.getDescription());
-            }
-        });
-
-        cardGrid.setOnFocusChangeListener(new View.OnFocusChangeListener()
-        {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus)
-            {
-                Log.d(TAG, "grid view has focus: " + hasFocus);
-                if (!hasFocus)
+                if(cardSelected && currentCard.getName() == card.getName())
                 {
-                    TextView text = (TextView)findViewById(R.id.cardDescription);
+                    cardSelected = false;
                     text.setText("");
+                }
+                else
+                {
+                    cardSelected = true;
+                    currentCard = card;
+                    text.setText(card.getDescription());
                 }
             }
         });
     }
-
-
 }
