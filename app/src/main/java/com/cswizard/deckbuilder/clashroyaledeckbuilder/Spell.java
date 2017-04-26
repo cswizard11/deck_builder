@@ -15,12 +15,27 @@ public class Spell extends Card
         super(name, rarity, "spell", elixirCost, description, resourceId);
     }
 
-    public Spell(String name, String rarity, int elixirCost, String description, int resourceId,
-                 int damage, int crownTowerDamage, double radius)
-    {
-        super(name, rarity, "spell", elixirCost, description, resourceId);
+    public int getDamage() {
+        return damage;
+    }
+
+    public void setDamage(int damage) {
         this.damage = damage;
+    }
+
+    public int getCrownTowerDamage() {
+        return crownTowerDamage;
+    }
+
+    public void setCrownTowerDamage(int crownTowerDamage) {
         this.crownTowerDamage = crownTowerDamage;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public void setRadius(double radius) {
         this.radius = radius;
     }
 }

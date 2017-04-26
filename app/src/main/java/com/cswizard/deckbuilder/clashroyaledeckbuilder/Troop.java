@@ -18,22 +18,118 @@ public class Troop extends Card
     private int deploytime;
     private boolean air;
 
-    public Troop(String name, String rarity, int elixirCost, String description,
-                 int resourceId, int hitpoints, int damage, boolean areaDamage, boolean targetsAir,
-                 boolean targetsBuildings, double range, double hitspeed, String speed,
-                 int deploytime, boolean air)
+    public Troop(String name, String rarity, int elixirCost, String description, int resourceId)
     {
         super(name, rarity, "troop", elixirCost, description, resourceId);
+    }
+
+    public int getHitpoints()
+    {
+        return hitpoints;
+    }
+
+    public void setHitpoints(int hitpoints)
+    {
         this.hitpoints = hitpoints;
+    }
+
+    public int getDamage()
+    {
+        return damage;
+    }
+
+    public void setDamage(int damage)
+    {
         this.damage = damage;
+    }
+
+    public boolean isAreaDamage()
+    {
+        return areaDamage;
+    }
+
+    public void setAreaDamage(boolean areaDamage)
+    {
         this.areaDamage = areaDamage;
+    }
+
+    public boolean isTargetsAir()
+    {
+        return targetsAir;
+    }
+
+    public void setTargetsAir(boolean targetsAir)
+    {
         this.targetsAir = targetsAir;
+    }
+
+    public boolean isTargetsBuildings()
+    {
+        return targetsBuildings;
+    }
+
+    public void setTargetsBuildings(boolean targetsBuildings)
+    {
         this.targetsBuildings = targetsBuildings;
+    }
+
+    public double getRange()
+    {
+        return range;
+    }
+
+    public void setRange(double range)
+    {
         this.range = range;
-        this.dps = (double)damage/hitspeed;
+    }
+
+    public double getDps()
+    {
+        return dps;
+    }
+
+    public void setDps(double dps)
+    {
+        this.dps = dps;
+    }
+
+    public double getHitspeed()
+    {
+        return hitspeed;
+    }
+
+    public void setHitspeed(double hitspeed)
+    {
         this.hitspeed = hitspeed;
+    }
+
+    public String getSpeed()
+    {
+        return speed;
+    }
+
+    public void setSpeed(String speed)
+    {
         this.speed = speed;
+    }
+
+    public int getDeploytime()
+    {
+        return deploytime;
+    }
+
+    public void setDeploytime(int deploytime)
+    {
         this.deploytime = deploytime;
+    }
+
+    public boolean isAir()
+    {
+        return air;
+    }
+
+    public void setAir(boolean air)
+    {
         this.air = air;
     }
 }
